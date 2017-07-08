@@ -16,7 +16,7 @@ describe('TodoSearch', () => {
     var action = {
       type: 'SET_SEARCH_TEXT',
       searchText
-    }
+    };
     var spy = expect.createSpy();
     var todoSearch = TestUtils.renderIntoDocument(<TodoSearch dispatch={spy}/>);
 
@@ -27,9 +27,9 @@ describe('TodoSearch', () => {
   });
 
   it('should dispatch TOGGLE_SHOW_COMPLETED when checkbox checked', () => {
-    var action ={
+    var action = {
       type: 'TOGGLE_SHOW_COMPLETED'
-    }
+    };
     var spy = expect.createSpy();
     var todoSearch = TestUtils.renderIntoDocument(<TodoSearch dispatch={spy}/>);
 

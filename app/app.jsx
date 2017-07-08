@@ -4,11 +4,9 @@ var {Provider} = require('react-redux');
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 
 var TodoApp = require('TodoApp');
-
 var actions = require('actions');
 var store = require('configureStore').configure();
 var TodoAPI = require('TodoAPI');
-
 
 store.subscribe(() => {
   var state = store.getState();
@@ -19,7 +17,7 @@ store.subscribe(() => {
 var initialTodos = TodoAPI.getTodos();
 store.dispatch(actions.addTodos(initialTodos));
 
-// load foundation
+// Load foundation
 require('style!css!foundation-sites/dist/css/foundation.min.css')
 
 $(document).foundation();
