@@ -15,6 +15,7 @@ describe('AddTodo', () => {
   it('should dispatch ADD_TODO when valid todo text', () => {
     var todoText = 'Check mail';
     var action = actions.startAddTodo(todoText);
+
     var spy = expect.createSpy();
     var addTodo = TestUtils.renderIntoDocument(<AddTodo dispatch={spy}/>);
     var $el = $(ReactDOM.findDOMNode(addTodo));
