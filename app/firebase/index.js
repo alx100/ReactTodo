@@ -2,12 +2,12 @@ import firebase from 'firebase';
 
 try {
    var config = {
-    apiKey: "AIzaSyBr7A0CNPhDuktIypGoQw9ixrdRX_porI8",
-    authDomain: "alx-todo-app.firebaseapp.com",
-    databaseURL: "https://alx-todo-app.firebaseio.com",
-    projectId: "alx-todo-app",
-    storageBucket: "alx-todo-app.appspot.com",
-    messagingSenderId: "857111677643"
+    apiKey: process.env.API_KEY,
+    authDomain: process.env.AUTH_DOMAIN,
+    databaseURL: process.env.DATABASE_URL,
+    projectId: process.env.PROJECT_ID,
+    storageBucket: process.env.STORAGE_BUCKET,
+    messagingSenderId: process.env.MESSAGING_SENDER_ID
 };
   firebase.initializeApp(config);
 } catch (e) {
